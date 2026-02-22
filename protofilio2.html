@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harshit Dubey Portfolio</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+body { background:#FFF8F0; color:#4A4A4A; line-height:1.6; scroll-behavior:smooth; }
+a { color:#FF7F7F; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* Header */
+header { position: fixed; width:100%; background:#FFF4E6; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; box-shadow:0 4px 10px rgba(0,0,0,0.05); border-radius:0 0 15px 15px; z-index:100; }
+.logo { font-weight:bold; font-size:1.5rem; color:#FF7F7F; }
+nav ul { list-style:none; display:flex; gap:1.5rem; }
+nav ul li a { font-weight:500; transition:0.3s; }
+nav ul li a:hover { color:#FFB3B3; }
+
+/* Hero Section */
+#home { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; height:90vh; padding:2rem; }
+.hero-left, .hero-right { flex:1 1 400px; margin:1rem; opacity:0; transform:translateY(30px); animation:fadeInUp 1s forwards; }
+.hero-left { animation-delay:0.3s; }
+.hero-right { animation-delay:0.6s; }
+.hero-left h2 { font-size:2.8rem; margin-bottom:1rem; color:#FF7F7F; }
+.hero-left p { font-size:1.2rem; margin-bottom:1.5rem; color:#7A7A7A; }
+.btn { padding:0.8rem 2rem; border:2px solid #FFB3B3; border-radius:50px; background:#FFEAEA; color:#FF7F7F; font-weight:bold; transition:0.3s; }
+.btn:hover { background:#FF7F7F; color:#fff; transform:scale(1.05); }
+
+/* Sections & Cards */
+section { padding:6rem 2rem; max-width:1000px; margin:auto; display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; }
+.card { background:#FFF4E6; border-radius:15px; padding:2rem; flex:1 1 300px; min-height:150px; display:flex; flex-direction:column; justify-content:center; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition:0.3s; opacity:0; transform:translateY(20px); }
+.card:hover { transform:scale(1.03); box-shadow:0 8px 20px rgba(0,0,0,0.08); }
+
+section h2 { width:100%; text-align:center; margin-bottom:2rem; font-size:2.2rem; color:#FF7F7F; }
+
+/* Footer */
+footer { text-align:center; padding:2rem 1rem; background:#FFF4E6; border-top:1px solid #FFD9D9; border-radius:15px 15px 0 0; color:#7A7A7A; }
+
+@media(max-width:768px){ 
+  .hero-left,.hero-right{ flex:1 1 100%; text-align:center; } 
+  .card{ flex:1 1 100%; }
+}
+
+/* Animations */
+@keyframes fadeInUp { to { opacity:1; transform:translateY(0); } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Harshit Dubey</div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section id="home">
+  <div class="hero-left">
+    <h2>Hello, I'm Harshit Dubey</h2>
+    <p>16 years old | Web Developer | Storyteller | Poet | Voice Over Artist</p>
+    <a href="#skills" class="btn">See My Skills</a>
+  </div>
+  <div class="hero-right">
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>Building responsive and cute websites with HTML, CSS & JS.</p>
+    </div>
+    <div class="card">
+      <h3>Storytelling</h3>
+      <p>Writing heartwarming stories that touch the soul.</p>
+    </div>
+    <div class="card">
+      <h3>Poetry & Voice</h3>
+      <p>Expressing feelings softly through poems & narration.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>I’m 16, a passionate creator. I love soft, cozy, and heartful projects in web development, storytelling, poetry, and voice-over artistry. Everything I make is meant to feel gentle and warm.</p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="card"><h3>HTML/CSS</h3><p>Clean, cute, and responsive layouts.</p></div>
+  <div class="card"><h3>JavaScript</h3><p>Smooth, gentle, interactive features.</p></div>
+  <div class="card"><h3>Storytelling</h3><p>Soft, touching narratives for all audiences.</p></div>
+  <div class="card"><h3>Poetry & Voice</h3><p>Heartwarming poems and narration skills.</p></div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="card">
+    <p>Email: <a href="mailto:a97951145@gmail.com">a97951145@gmail.com</a></p>
+    <p>Phone: <a href="tel:+918349801146">8349801146</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Harshit Dubey. All rights reserved.</p>
+</footer>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('nav ul li a').forEach(link=>{
+  link.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// Animate cards on scroll
+const cards = document.querySelectorAll('.card, .hero-left, .hero-right');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){ 
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
+    }
+  });
+},{ threshold: 0.2 });
+
+cards.forEach(card=>observer.observe(card));
+</script>
+
+</body>
+</html>
